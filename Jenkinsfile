@@ -16,7 +16,7 @@ node {
     sh 'webpack'
 
     stage 'Deploy'
-    // Do nothing
+    sh 'rsync -vrlptD --delete ${WORKSPACE}/dist/ ${WINE_DEPLOY_PATH}/'
   } catch (e) {
     err_msg = "${e}"
     currentBuild.result = "FAILURE"
