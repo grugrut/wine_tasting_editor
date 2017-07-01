@@ -10,10 +10,10 @@ node {
     sh 'npm install'
   
     stage 'Test'
-    // Do nothing
+    sh 'npm run lint'
 
     stage 'Build'
-    sh 'webpack'
+    sh 'npm run build'
 
     stage 'Deploy'
     withCredentials([string(credentialsId: 'WINE_DEPLOY_PATH', variable: 'WINE_DEPLOY_PATH')]) {

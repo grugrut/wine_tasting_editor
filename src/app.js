@@ -1,8 +1,8 @@
 var Vue = require('vue');
 
-var vm = new Vue({
+new Vue({
     el: '#app',
     data: {
-        text: "Wine tasting editor"
+        text: 'Wine tasting editor'
     }
 });
