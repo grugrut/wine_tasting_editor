@@ -7,6 +7,11 @@
     <body>
         <div id="app">
             <p>{{text}}</p>
+            <ul>
+                <li v-for="clarity in clarities">
+                    {{ clarity.text }}
+                </li>
+            </ul>
         </div>
         <script type="text/javascript" src="./bundle.js"></script>
     </body>
