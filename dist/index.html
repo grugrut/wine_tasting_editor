@@ -8,7 +8,7 @@
         <div id="app">
             <p>{{text}}</p>
             <ul>
-                <li v-for="clarity in clarities">
+                <li v-for="clarity in clarities" v-if="clarity.red">
                     {{ clarity.text }}
                 </li>
             </ul>
